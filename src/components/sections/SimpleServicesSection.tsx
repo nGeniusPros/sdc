@@ -5,6 +5,8 @@ import Image from 'next/image';
 
 // Service card component
 const ServiceCard = ({
+  // id is used for accessibility and future features
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   id,
   title,
   description,

@@ -1,7 +1,7 @@
 import { HERO_SECTION } from '../../lib/constants';
 import Button from '../Button';
-import { motion, AnimatePresence } from 'framer-motion';
-import { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+import { useState } from 'react';
 
 // Badge component for trust signals
 const TrustBadge = ({ text, icon }: { text: string; icon: string }) => (
@@ -73,7 +73,8 @@ const Testimonial = ({ quote, author, location }: { quote: string; author: strin
 );
 
 export const HeroSection = () => {
-  const [currentTestimonialIndex, setCurrentTestimonialIndex] = useState(0);
+  // Testimonial data
+  const [_currentTestimonialIndex] = useState(0);
   const testimonial = {
     quote: "Dr. Hanookai and his team changed my life. After years of hiding my smile, I now can't stop showing it off!",
     author: "Sarah M.",

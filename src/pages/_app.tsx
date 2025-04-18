@@ -1,12 +1,11 @@
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import Layout from "../components/layout/Layout";
-import { useRouter } from "next/router";
+// import { useRouter } from "next/router";
 import Head from "next/head";
 import { SITE_DATA } from "../lib/constants";
 
 export default function App({ Component, pageProps }: AppProps) {
-  const router = useRouter();
 
   return (
     <>

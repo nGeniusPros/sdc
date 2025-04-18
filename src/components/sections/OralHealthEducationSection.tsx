@@ -51,7 +51,12 @@ const TopicCard = ({
   isSelected,
   onClick
 }: {
-  topic: any;
+  topic: {
+    id: string;
+    title: string;
+    subtitle: string;
+    icon: string;
+  };
   isSelected: boolean;
   onClick: () => void;
 }) => (
@@ -80,7 +85,16 @@ const TopicCard = ({
 );
 
 // Detailed topic view component
-const TopicDetail = ({ topic }: { topic: any }) => (
+const TopicDetail = ({ topic }: { topic: {
+  id: string;
+  title: string;
+  subtitle: string;
+  description: string;
+  icon: string;
+  keyPoints: string[];
+  relatedCondition?: string;
+  ctaText: string;
+} }) => (
   <motion.div
     initial={{ opacity: 0, y: 20 }}
     animate={{ opacity: 1, y: 0 }}

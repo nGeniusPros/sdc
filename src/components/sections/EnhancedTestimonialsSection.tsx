@@ -28,8 +28,7 @@ const StarRating = ({ rating }: { rating: number }) => {
 
 // Testimonial Card Component
 const TestimonialCard = ({
-  testimonial,
-  isActive
+  testimonial
 }: {
   testimonial: {
     quote: string;
@@ -37,7 +36,7 @@ const TestimonialCard = ({
     location: string;
     rating: number
   };
-  isActive: boolean
+  isActive?: boolean
 }) => {
   return (
     <motion.div
